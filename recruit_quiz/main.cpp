@@ -1,4 +1,5 @@
 #include "question.h"
+#include "exam_japanese.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -103,6 +104,16 @@ int main()
 	
 
 	cout << "[リクルート対策クイズ]\n";
+
+	cout << "教科を選んでください\n1=数学\n2=国語\n";
+	int subject;
+	cin >> subject;
+	if (subject == 2) 
+	{
+		questions = CreateKanjiExam();
+		const QuestionList idiomExam = CreateIdiomExam();
+		questions.insert(questions.end(), idiomExam.begin(), idiomExam.end());
+	}
 
 	for (const auto& e : questions)
 	{

@@ -116,7 +116,9 @@ int main()
 		QuestionList homophoneExam = CreateHomophoneExam();
 		questions.insert(questions.end(), homophoneExam.begin(), homophoneExam.end());
 		QuestionList antonymExam = CreateAntonymExam();
-		questions.insert(questions.end(), antonymExam.begin(), antonymExam.end())
+		questions.insert(questions.end(), antonymExam.begin(), antonymExam.end());
+		QuestionList synonymExam = CreateSynonymExam();
+		questions.insert(questions.end(), synonymExam.begin(), synonymExam.end());
 	}
 
 	for (const auto& e : questions)

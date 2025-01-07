@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <string>
 
 // ƒ‰ƒ“ƒ_ƒ€‚È”Ô†”z—ñ‚ğì¬‚·‚é
 std::vector<int> CreateRandomIndices(int n);
@@ -11,3 +12,8 @@ void Shuffle(std::vector<int>& indices);
 // n            ì¬‚·‚é”Ô†‚Ì”ÍˆÍ
 // correctIndex ³‰ğ‚Ì”Ô†
 std::vector<int> CreateWrongIndices(int n, int correctIndex);
+
+// •¶š—ñ‚ğ•ªŠ„‚·‚é
+// s •ª‰ğ‚·‚é•¶š—ñ
+// c ‹æØ‚è•¶š
+std::vector<std::string> Split(const std::string & s, char c);

@@ -77,13 +77,27 @@ QuestionList CreateKanjiExam()
 			}
 
 			questions.push_back({ s, to_string(correctNo) });
-
 		}
-
 	} // if type
-
 	return questions;
 }
+
+// ‘Œê‚Ì–â‘è‚ğì¬‚·‚é
+QuestionList CreateJapaneseExam()
+{
+	QuestionList questions;
+	questions = CreateKanjiExam();
+	QuestionList synonymExam = CreateSynonymExam();
+	questions.insert(questions.end(), synonymExam.begin(), synonymExam.end());
+	QuestionList antonymExam = CreateAntonymExam();
+	questions.insert(questions.end(), antonymExam.begin(), antonymExam.end());
+	QuestionList idiomExam = CreateIdiomExam();
+	questions.insert(questions.end(), idiomExam.begin(), idiomExam.end());
+	QuestionList homophoneExam = CreateHomophoneExam();
+	questions.insert(questions.end(), homophoneExam.begin(), homophoneExam.end());
+	return questions;
+}
+
 
 // Šµ—p‹å‚ÌˆÓ–¡‚ğ“š‚¦‚é–â‘è‚ğì¬‚·‚é
 QuestionList CreateIdiomExam()
@@ -131,7 +145,6 @@ QuestionList CreateIdiomExam()
 		for (int j = 0; j < 3; j++)
 		{
 			s += "\n  " + to_string(j + 1) + ":" + data[answers[j]].meaning;
-
 		}
 		questions.push_back({ s, to_string(correctNo) });
 	}

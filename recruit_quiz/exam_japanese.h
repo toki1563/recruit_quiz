@@ -16,3 +16,6 @@ QuestionList CreateAntonymExam();
 
 // —Ş‹`Œê‚Ì–â‘è‚ğì¬‚·‚é
 QuestionList CreateSynonymExam();
+
+// ‘Œê‚Ì–â‘è‚ğì¬‚·‚é
+QuestionList CreateJapaneseExam();

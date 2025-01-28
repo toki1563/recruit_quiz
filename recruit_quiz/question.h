@@ -8,6 +8,7 @@ struct Question
 {
 	std::string q; // –â‘è•¶
 	std::string a; // “š‚¦
+	std::vector<std::string> b; // “š‚¦(•¡”‚ ‚éê‡)
 };
 
 // –â‘è‚Ì”z—ñ‚ğ•\‚·Œ^
